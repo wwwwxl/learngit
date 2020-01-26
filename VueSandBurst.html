@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>沙包的渐变</title>
+		<link rel="stylesheet" type="text/css" href="css/VueSandBurst.css"/>
+	</head>
+	<body>
+		<div id="vue-app">
+			<div id="bag" :class="{burst:ended}"></div>
+			<div id="bag-health">
+				<div :style="{width:health+'%'}"></div>
+			</div>
+			<div id="controls">
+				<button @click="punch()" type="button" v-show="!ended">Punch</button>
+				<button @click="restart()" type="button">Restart</button>
+			</div>
+		</div>
+	</body>
+	<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/VueSandBurst.js" type="text/javascript" charset="utf-8"></script>
+</html>
